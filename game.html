@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/game.css" />
+    <title>Game | #</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="scores">
+          <div class="scores_data">
+            <span class="player_name">Player 1: </span>
+            <span class="data_current" id="data_p1">0</span>
+          </div>
+          <div class="scores_data">
+            <span class="player_name">Player 2: </span>
+            <span class="data_current" id="data_p2">0</span>
+          </div>
+        </div>
+        <div class="scores_reset">Borrar</div>
+      </header>
+      <div class="btn_new" id="btn_new">Nuevo</div>
+      <div id="current_turn"></div>
+      <div class="board">
+        <div class="board_button" id="1" pressed="false"></div>
+        <div class="board_button" id="2" pressed="false"></div>
+        <div class="board_button" id="3" pressed="false"></div>
+        <div class="board_button" id="4" pressed="false"></div>
+        <div class="board_button" id="5" pressed="false"></div>
+        <div class="board_button" id="6" pressed="false"></div>
+        <div class="board_button" id="7" pressed="false"></div>
+        <div class="board_button" id="8" pressed="false"></div>
+        <div class="board_button" id="9" pressed="false"></div>
+      </div>
+      <footer>Gary Yaral &copy <span id="year"></span></footer>
+    </main>
+    <div class="modal hide_modal" id="modal">
+      <div class="winner_text">
+        <div class="winner_title">Winner</div>
+        <div class="winner_name"></div>
+      </div>
+    </div>
+    <script src="js/game.js"></script>
+    <script>
+      document.querySelector("#year").innerHTML = new Date().getFullYear()
+    </script>
+  </body>
+</html>
